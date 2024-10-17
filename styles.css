@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: cyan;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.obstacle {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: magenta;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
